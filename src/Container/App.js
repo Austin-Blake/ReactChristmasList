@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CurrentList from '../Presentational/CurrentList';
 import StartList from '../Presentational/StartList';
+import Display from '../Presentational/Display'
 import './App.css';
 
 export default function AppFunction() {
@@ -13,18 +14,17 @@ export default function AppFunction() {
   const handleChange = ({ target }) => {
     const { name, value } = target;
     setNewItem((prev) => ({ ...prev, id: Date.now(), [name]: value }));
-    
   };
 
   
 //HandleSubmit
   const [allItems, setAllItems] = useState([]);
-
   const handleSubmit = (event) => {
         event.preventDefault();
     if (!newItem.title) return;
-        setAllItems((prev,) => [newItem, ...prev]);
-        setNewItem({});
+    setAllItems((prev,) => [newItem, ...prev]);
+    
+    setNewItem({});
   };
   
 
@@ -41,10 +41,13 @@ export default function AppFunction() {
         handleChange={handleChange}
         handleSubmit={handleSubmit}
       />
+      {allItems < 1 ? <Display /> : (
       <CurrentList
-        allItems={allItems}        
+        allItems={allItems}
         handleDelete={handleDelete}
-      />
+        handleChange={handleChange}
+        />
+      )}
     </main>
   );
 }

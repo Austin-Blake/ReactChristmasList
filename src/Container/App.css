@@ -3,7 +3,6 @@ html, body {
   flex-direction: row;
   justify-content: center;
 	height: 100%;
-  background-color: black;
   text-align: center;
   margin: 0;
 }
@@ -19,21 +18,59 @@ html, body {
 	width: 100%;
 }
 
+.display-main {
+  background-image: url("../mike-arney-9r-_2gzP37k-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 5rem 5rem;
+  color: white;
+  margin: 0px auto;
+}
+
+.display-container {
+  background-color: rgba(0, 0, 0, 0.483);
+  width: 100vw;
+  height: 100%;
+}
+
+.list-main {
+  height: 100vh;
+  background-image: url("../mike-arney-9r-_2gzP37k-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0px auto;
+  
+}
+.list-container {
+  background-color: rgba(0, 0, 0, 0.483);
+  width: 100vw;
+  height: 100%;
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
 }
 
 .input {
   text-align: center;
   font-size: 1.5rem;
   height: 3rem;
-  background-color: rgb(135, 132, 87);
-  border: 1px solid white;
+  background-color: rgba(231, 231, 229, 0.36);
+  border: 1px solid rgba(68, 67, 67, 0.455);
 }
 
+.input:hover,
+.input:focus {
+  box-shadow: 5px 2px 5px rgb(145, 145, 145),inset 0 0 20px 1px rgba(137, 137, 137, 0.489);;
+  background: rgb(255, 255, 255);
+  
+}
 
 .container {
   margin: 1rem auto;
@@ -45,24 +82,32 @@ ul {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+  width: 100vw;
 }
 
-li {
+.item-list li {
   display:flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
   align-items: baseline;
-  background-color: Cornsilk;
-  border: 3px solid rgb(39, 39, 39);
+  background-color: rgb(224, 224, 224);
+  box-shadow: inset 0 0 5px 2px rgba(172, 172, 172, 0.762);
   width: 90%;
+  margin-top: 2rem;
 }
+
+.display-list li {
+  list-style: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
 
 .btn {
   display: flex;
-
   display: block;
   padding: .5rem;
   margin: 1rem auto;
@@ -70,8 +115,9 @@ li {
 }
 
 .delete-btn {
-  background-color: transparent;
-  border: 0;
+  color: red;
+  background: rgb(255, 255, 255);
+  box-shadow: inset 0 0 20px 1px rgba(137, 137, 137, 0.489);
   padding: 10px;
   font-weight: bolder;
   cursor: pointer;
@@ -80,7 +126,9 @@ li {
 
 .delete-btn:hover,
 .delete-btn:focus {
-  box-shadow: 5px black;
+  box-shadow: 5px 2px 5px rgb(145, 145, 145),inset 0 0 20px 1px rgba(137, 137, 137, 0.489);;
+  background: rgb(255, 255, 255);
+  
 }
 
 li h1, li h2, li h3 {

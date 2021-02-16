@@ -1,11 +1,11 @@
 import React from 'react';
 //onsubmit should render to new page which displays the actual list
 
-export default function StartList({ newItem, handleChange, handleSubmit, allItems}) {
+export default function StartList({allItems, newItem, handleChange, handleSubmit }) {
     
     return (
         <form onSubmit={handleSubmit} className='start-list' >
-        
+
             {allItems.includes(newItem.name) ? null : (
             <div className="container">    
             <input
@@ -16,7 +16,7 @@ export default function StartList({ newItem, handleChange, handleSubmit, allItem
                 onChange={handleChange}
             /> 
             </div>
-            )}
+                    )}
             {!newItem.name ? null : (
                 <div className="container">
                     <input
@@ -26,7 +26,6 @@ export default function StartList({ newItem, handleChange, handleSubmit, allItem
                         value={newItem.title || ""}
                         onChange={handleChange}
                     />
-                    
                 </div>
             )}
             {!newItem.title ? null : (
@@ -41,7 +40,6 @@ export default function StartList({ newItem, handleChange, handleSubmit, allItem
                     <button className="btn" type="submit" >Add List Item</button>
                 </div>
             )}
-            </form>
-        
+        </form>
     );
 }
