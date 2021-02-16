@@ -1,3 +1,14 @@
+#**A slight twist on the normal To-do list**
+
+This is a React app that has 3 input fields. It will only display the initial input at first. The last two input fields will render upon input in the previous field. Once
+input is posted, a new page is then rendered to display your Christmas list. 
+
+## I created this app to sharpen my skills within the React. 
+
+This was all completed using functional React components. I have intentions on creating an edit mode, this may be a later add on. This was a challenge due to so many conditional renders that were needed to function as I intended. I am aware there are other options eg react router and such, but in the end I still needed to hone this skill. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
