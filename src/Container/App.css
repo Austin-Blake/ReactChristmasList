@@ -1,6 +1,9 @@
 html, body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 	height: 100%;
-  background-color: #ffffff;
+  background-color: black;
   text-align: center;
   margin: 0;
 }
@@ -14,55 +17,59 @@ html, body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	padding: 8px;
 }
 
-h1 {
-  margin: 8px 0;
-}
-
-form {
+main {
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
+  width: 100%;
 }
 
-input,
-textarea {
-  padding: 5px;
-}
-
-form button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px;
-}
-
-ul {
-  list-style: none;
+.input {
   text-align: center;
+  font-size: 1.5rem;
+  height: 3rem;
+  background-color: rgb(135, 132, 87);
+  border: 1px solid white;
+}
+
+
+.container {
+  margin: 1rem auto;
+  width: fit-content;
+  
 }
 
 ul {
-  padding: 0;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 li {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: baseline;
   background-color: Cornsilk;
-  border: 1px solid BurlyWood;
-  border-radius: 5px 2px;
-  margin: 8px 0;
+  border: 3px solid rgb(39, 39, 39);
+  width: 90%;
 }
 
-li div {
-  position: relative;
+.btn {
+  display: flex;
+
+  display: block;
+  padding: .5rem;
+  margin: 1rem auto;
+  width: inherit;
 }
 
-li div button {
-  position: absolute;
-  top: 0;
-  right: 0;
+.delete-btn {
   background-color: transparent;
   border: 0;
   padding: 10px;
@@ -71,17 +78,12 @@ li div button {
   border-radius: 5px;
 }
 
-li div button:hover,
-li div button:focus {
-  box-shadow: 0 0 1px black;
+.delete-btn:hover,
+.delete-btn:focus {
+  box-shadow: 5px black;
 }
 
-li h2 {
-  background-color: NavajoWhite;
+li h1, li h2, li h3 {
   margin: 0;
-  padding: 4px;
-}
-
-li p {
-  margin: 8px;
+  padding: 1rem;
 }
