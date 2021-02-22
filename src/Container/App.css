@@ -1,69 +1,76 @@
-html, body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-	height: 100%;
-  text-align: center;
-  margin: 0;
-}
-
 * {
 	font-family: Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
 
-#app {
-	position: relative;
+html, body {
+  display: flex;
+  flex-direction: column;
 	height: 100%;
-	width: 100%;
+  text-align: center;
+  
 }
 
+
+.start-list{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
 .display-main {
   background-image: url("../mike-arney-9r-_2gzP37k-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 5rem 5rem;
+  background-position: center;
   color: white;
-  margin: 0px auto;
+  height: 100%;
+  width: 100%;
 }
 
 .display-container {
   background-color: rgba(0, 0, 0, 0.483);
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 }
 
+.display-container h1, .display-container h2 {
+  font-size: 1.8rem;
+  margin: 3rem auto;
+}
+
+
 .list-main {
-  height: 100vh;
+  height: 100%;
   background-image: url("../mike-arney-9r-_2gzP37k-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0px auto;
-  
+
 }
 .list-container {
   background-color: rgba(0, 0, 0, 0.483);
   width: 100vw;
-  height: 100%;
+  height: 100vh;
 }
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
   background-color: rgb(255, 255, 255);
 }
 
 .input {
   text-align: center;
   font-size: 1.5rem;
+  margin: 1rem 0 .2rem 0;
   height: 3rem;
-  background-color: rgba(231, 231, 229, 0.36);
+  background-color: rgba(230, 25, 6, 0.993);
   border: 1px solid rgba(68, 67, 67, 0.455);
 }
+
+
 
 .input:hover,
 .input:focus {
@@ -73,52 +80,52 @@ main {
 }
 
 .container {
-  margin: 1rem auto;
-  width: fit-content;
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-ul {
+.item-list ul{
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  height: 100vh;
   width: 100vw;
 }
+
+
 
 .item-list li {
   display:flex;
   flex-direction: row;
-  justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: baseline;
-  background-color: rgb(224, 224, 224);
-  box-shadow: inset 0 0 5px 2px rgba(172, 172, 172, 0.762);
-  width: 90%;
-  margin-top: 2rem;
+  align-items: center;
+  background-color: rgb(181, 180, 180);
+  box-shadow: inset 0 0 2px 6px rgba(128, 128, 128, 0.762);
+  margin: .3rem;
 }
-
-.display-list li {
-  list-style: none;
-  font-size: 1.5rem;
-  line-height: 3rem;
+.name{
+  width: fit-content;
 }
-
+.title{
+  width: 98vw;
+}
 
 .btn {
   display: flex;
   display: block;
   padding: .5rem;
   margin: 1rem auto;
-  width: inherit;
+  width: 35%;
 }
 
 .delete-btn {
   color: red;
   background: rgb(255, 255, 255);
-  box-shadow: inset 0 0 20px 1px rgba(137, 137, 137, 0.489);
-  padding: 10px;
+  box-shadow: inset 0 0 20px 1px rgba(108, 108, 108, 0.489);
+  padding: 5px;
   font-weight: bolder;
   cursor: pointer;
   border-radius: 5px;
@@ -132,6 +139,6 @@ ul {
 }
 
 li h1, li h2, li h3 {
-  margin: 0;
+  height: 3rem;
   padding: 1rem;
 }

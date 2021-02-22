@@ -5,14 +5,9 @@ export default function Display() {
         
         <main className='display-main'>
             <div className='display-container'>
-                <h1>If your in need of an easy to use list formatter, you have found it!</h1>
-                <ul className='display-list'>
-                    <li>Start by adding a name.</li>
-                    <li>Then add the gift you want to purchase for them!</li>
-                    <li>Add a brief description.</li>
-                    <li>Then add it to your list!</li>
-                </ul>
-        </div>
+                <h1>Do you need to start a Christmas List?</h1>
+                <h2>You came to the right place!</h2>
+            </div>
         </main>
             
     )

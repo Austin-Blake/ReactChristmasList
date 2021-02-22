@@ -3,6 +3,7 @@ import CurrentList from '../Presentational/CurrentList';
 import StartList from '../Presentational/StartList';
 import Display from '../Presentational/Display'
 import './App.css';
+import '../reset.css';
 
 export default function AppFunction() {
   
@@ -23,7 +24,6 @@ export default function AppFunction() {
         event.preventDefault();
     if (!newItem.title) return;
     setAllItems((prev,) => [newItem, ...prev]);
-    
     setNewItem({});
   };
   
@@ -34,7 +34,7 @@ export default function AppFunction() {
   };
   
   return (
-    <main>
+    <main className='main'>
       <StartList
         allItems={allItems}
         newItem={newItem}
